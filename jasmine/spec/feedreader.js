@@ -63,13 +63,14 @@ $(function() {
             expect($('body').hasClass('menu-hidden')).toBeTruthy();
         });
 
-         /* TODO: Write a test that ensures the menu changes
-          * visibility when the menu icon is clicked. This test
-          * should have two expectations: does the menu display when
-          * clicked and does it hide when clicked again.
+         /* Test that the menu changes visibility when the menu icon is clicked.
           */
          it('changes visibility when menu icon is clicked', function() {
-             pending('not yet implemented');
+             expect($('body').hasClass('menu-hidden')).toBeTruthy(); // should start being hidden
+             $('.menu-icon-link').trigger('click');
+             expect($('body').hasClass('menu-hidden')).toBeFalsy();
+             $('.menu-icon-link').trigger('click');
+             expect($('body').hasClass('menu-hidden')).toBeTruthy();
          });
     });
 
