@@ -95,6 +95,33 @@ $(function() {
          * by the loadFeed function that the content actually changes.
          * Remember, loadFeed() is asynchronous.
          */
+        var firstFeeds;
+        var secondFeeds;
+
+        beforeEach(function(done) {
+            loadFeed(0, function () {
+                firstFeeds = $('.feed');
+                loadFeed(1, function () {
+                    secondFeeds = $('.feed');
+                    done();
+                });
+            });
+        });
+
+
+        it('is different from Previous Feed Selection', function(done) {
+            // TODO: fix test
+            expect(firstFeeds).not.toBeUndefined();
+            expect(secondFeeds).not.toBeUndefined();
+            expect(firstFeeds).not.toEqual(secondFeeds);
+            expect({a:'a'}).toEqual({a:'a'});
+            done();
+        });
+
 
     });
+
+
+
+
 }());
