@@ -91,9 +91,8 @@ $(function() {
     });
 
     describe('New Feed Selection', function() {
-        /* TODO: Write a test that ensures when a new feed is loaded
-         * by the loadFeed function that the content actually changes.
-         * Remember, loadFeed() is asynchronous.
+        /* Test that when a new feed is loaded by the loadFeed function,
+         * the content actually changes.
          */
         var firstFeeds;
         var secondFeeds;
@@ -110,8 +109,8 @@ $(function() {
 
 
         it('is different from Previous Feed Selection', function(done) {
-            expect(firstFeeds).not.toBeUndefined();
-            expect(secondFeeds).not.toBeUndefined();
+            expect(firstFeeds).toBeDefined();
+            expect(secondFeeds).toBeDefined();
             expect(firstFeeds).not.toEqual(secondFeeds);
             done();
         });
