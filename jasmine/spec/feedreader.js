@@ -75,7 +75,7 @@ $(function() {
     });
 
 
-    describe('Initial Entries', function (){
+    describe('Initial Entries', function(){
         // use of beforeEach() with a call to the asynchronous function,
         // passing 'done' as the callback function, marks when the test should start
         // (when done is called within the calling function)
@@ -90,10 +90,11 @@ $(function() {
         });
     });
 
-    /* TODO: Write a new test suite named "New Feed Selection"
-
+    describe('New Feed Selection', function() {
         /* TODO: Write a test that ensures when a new feed is loaded
          * by the loadFeed function that the content actually changes.
          * Remember, loadFeed() is asynchronous.
          */
+
+    });
 }());
