@@ -4,5 +4,5 @@ This project was done for the [JavaScript Testing course](https://www.udacity.co
 
 ## Running the application
  - go to https://jennifercruz.github.io/feedreader or 
- - download it from [this Github repository](https://github.com/JenniferCruz/feedreader) and load the index.html into Chrome or Mozilla.
+ - download it from [this Github repository](https://github.com/JenniferCruz/feedreader/) and load the index.html into Chrome or Mozilla.
    
