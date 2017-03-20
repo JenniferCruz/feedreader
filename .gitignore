@@ -1,3 +1,2 @@
 .gitignore
-.idea/vcs.xml
-.idea
+.idea/*
