@@ -99,10 +99,10 @@ $(function() {
         var secondFeeds;
 
         beforeEach(function(done) {
-            loadFeed(0, function () {
-                firstFeeds = $('.feed');
-                loadFeed(1, function () {
-                    secondFeeds = $('.feed');
+            loadFeed(3, function () {
+                firstFeeds = $('.feed').text();
+                loadFeed(0, function () {
+                    secondFeeds = $('.feed').text();
                     done();
                 });
             });
@@ -110,15 +110,11 @@ $(function() {
 
 
         it('is different from Previous Feed Selection', function(done) {
-            // TODO: fix test
             expect(firstFeeds).not.toBeUndefined();
             expect(secondFeeds).not.toBeUndefined();
             expect(firstFeeds).not.toEqual(secondFeeds);
-            expect({a:'a'}).toEqual({a:'a'});
             done();
         });
-
-
     });
 
 

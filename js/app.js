@@ -122,7 +122,6 @@ $(function() {
 
         $('body').addClass('menu-hidden');
         loadFeed(item.data('id'));
-        // TODO: How is default being prevented?
         return false;
     });
 
