@@ -76,15 +76,17 @@ $(function() {
 
 
     describe('Initial Entries', function (){
+        // use of beforeEach() with a call to the asynchronous function,
+        // passing 'done' as the callback function, marks when the test should start
+        // (when done is called within the calling function)
+        beforeEach(function(done) {
+            loadFeed(1, done);
+        });
 
-        /* TODO: Write a test that ensures when the loadFeed
-         * function is called and completes its work, there is at least
-         * a single .entry element within the .feed container.
-         * Remember, loadFeed() is asynchronous so this test will require
-         * the use of Jasmine's beforeEach and asynchronous done() function.
-         */
-        it('', function() {
-            pending('Not yet implemented');
+        it('.feed contains at least one .entry after loadFeed is called', function(done) {
+            var entries = $('.feed').find('.entry');
+            expect(entries.length).toBeGreaterThan(0);
+            done(); // call to done() marks end of this test
         });
     });
 
