@@ -1,8 +1,10 @@
 /* app.js
  *
  * This is our RSS feed reader application.
- * It used the Google Feed Reader API to grab RSS feeds as JSON object we can make use of.
- * After the Google API was deprecated, it changed to use Udacity RSStoJSON
+ * It used the Google Feed Reader API
+ * to grab RSS feeds as JSON object we can make use of.
+ * After the Google API was deprecated,
+ * it changed to use Udacity RSStoJSON
  * (https://github.com/udacity/frontend-nanodegree-feedreader/commit/d99cce69372f6dacad7c2bfd7d9dda4a45a7d806)
  * It also uses the Handlebars templating library and jQuery.
  */
@@ -25,7 +27,7 @@ var allFeeds = [
 ];
 
 /* This function performs everything necessary to load a
- * feed using the Google Feed Reader API. It will then
+ * feed using Udacity's RSStoJSON. It will then
  * perform all of the DOM operations required to display
  * feed entries on the page. Feeds are referenced by their
  * index position within the allFeeds array.
@@ -52,8 +54,8 @@ var allFeeds = [
                  title.html(feedName);   // Set the header text
                  container.empty();      // Empty out all previous entries
 
-                 /* Loop through the entries we just loaded via the Google
-                  * Feed Reader API. We'll then parse that entry against the
+                 /* Loop through the entries we just loaded via Udacity's rsstojson
+                  * We'll then parse that entry against the
                   * entryTemplate (created above using Handlebars) and append
                   * the resulting HTML to the list of entries on the page.
                   */
