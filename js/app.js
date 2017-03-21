@@ -1,9 +1,10 @@
 /* app.js
  *
- * This is our RSS feed reader application. It uses the Google
- * Feed Reader API to grab RSS feeds as JSON object we can make
- * use of. It also uses the Handlebars templating library and
- * jQuery.
+ * This is our RSS feed reader application.
+ * It used the Google Feed Reader API to grab RSS feeds as JSON object we can make use of.
+ * After the Google API was deprecated, it changed to use Udacity RSStoJSON
+ * (https://github.com/udacity/frontend-nanodegree-feedreader/commit/d99cce69372f6dacad7c2bfd7d9dda4a45a7d806)
+ * It also uses the Handlebars templating library and jQuery.
  */
 
 // The names and URLs to all of the feeds we'd like available.
@@ -22,15 +23,6 @@ var allFeeds = [
         url: 'http://feeds.feedburner.com/udacity-linear-digressions'
     }
 ];
-//
-/* This function starts up our application. The Google Feed
- * Reader API is loaded asynchonously and will then call this
- * function when the API is loaded.
- */
-function init() {
-    // Load the first feed we've defined (index of 0).
-    loadFeed(0);
-}
 
 /* This function performs everything necessary to load a
  * feed using the Google Feed Reader API. It will then
