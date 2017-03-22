@@ -60,17 +60,17 @@ $(function() {
          * through the HTML and the CSS
          */
         it('should be hidden by default', function() {
-            expect($('body').hasClass('menu-hidden')).toBeTruthy();
+            expect($('body').hasClass('menu-hidden')).toBe(true);
         });
 
          /* Test that the menu changes visibility when the menu icon is clicked.
           */
          it('changes visibility when menu icon is clicked', function() {
-             expect($('body').hasClass('menu-hidden')).toBeTruthy(); // should start being hidden
+             expect($('body').hasClass('menu-hidden')).toBe(true); // should start being hidden
              $('.menu-icon-link').trigger('click');
-             expect($('body').hasClass('menu-hidden')).toBeFalsy();
+             expect($('body').hasClass('menu-hidden')).toBe(false);
              $('.menu-icon-link').trigger('click');
-             expect($('body').hasClass('menu-hidden')).toBeTruthy();
+             expect($('body').hasClass('menu-hidden')).toBe(true);
          });
     });
 
